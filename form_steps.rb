@@ -14,8 +14,8 @@ When /^I?\s?uncheck "([^"]*)"$/ do |checkbox|
   uncheck checkbox
 end
 
-When /^I?\s?select "([^"]*)"$/ do |selectbox|
-  select selectbox
+When /^I?\s?select "([^"]*)" from "([^"]*)"$/ do |value, selectbox|
+  select value, :from => selectbox
 end
 
 When /^I?\s?unselect "([^"]*)"$/ do |selectbox|
