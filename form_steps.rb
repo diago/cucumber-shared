@@ -25,3 +25,8 @@ end
 When /^I?\s?attach the file "([^"]*)" to "([^"]*)"$/ do |path, input|
   attach_file(input, path) 
 end
+
+Then /^"([^"]*)" should be checked$/ do |arg1|
+  has_checked_field?(arg1).should be_true
+end
+
